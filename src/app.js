@@ -23,11 +23,15 @@ app.use(methodOverride('_method'));
 const staticPath = path.join(__dirname, "../public");
 // console.log(staticPath);
 
+//add viewsPath
+const viewsPath = path.join(__dirname, "../views");
+
 const partialPath = path.join(__dirname, "../partials");
 
 app.use(express.json());
 app.use(cookieParser());
 app.set("view engine", "hbs");
+app.set("views", viewsPath);
 app.use(express.urlencoded({ extended: false }));
 
 //this line is also important even also for dynamic websites. It will load css files and images
