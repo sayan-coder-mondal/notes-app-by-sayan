@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "notes-app",
+    "name": "notes-app-by-sayan",
     "builds": [
         {
             "src": "src/app.js",

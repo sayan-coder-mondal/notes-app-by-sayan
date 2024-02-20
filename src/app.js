@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const auth = require("./middleware/auth");
 const database = require("./mongodb");
-const PORT = process.env.PORT || 8000;
+const PORT =8000;
 
 
 const user = require("./schema/user");
