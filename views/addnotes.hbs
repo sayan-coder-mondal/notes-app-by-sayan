@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Notes</title>
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/addnotes.css">
+</head>
+
+<body>
+
+    {{>header}}
+
+    <form action="/addnotes" method="post" id="note_form">
+        <input type="text" name="title" id="title" class="input" placeholder="Add title" required maxlength="30">
+        {{!-- <input type="text" name="note" placeholder="Write notes" class="input" required> --}}
+        <textarea name="note" id="note" class="input" placeholder="Write notes" required maxlength="300"></textarea>
+        <input type="submit" id="submit" value="Add Note">
+    </form>
+</body>
+
+</html>
