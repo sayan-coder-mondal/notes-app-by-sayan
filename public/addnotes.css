@@ -1,0 +1,39 @@
+#note_form{
+    width: 80%;
+    height: 70vh;
+    margin: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    padding: 20px;
+    box-sizing: border-box;
+    border: none;
+}
+
+#title{
+    margin-top: 5vh;
+    height: 60px;
+    font-size: xx-large;
+}
+
+#note{
+    /* margin-top: 5vh; */
+    height: 50vh;
+    resize: none;
+    font-size: large;
+}
+
+#submit{
+    margin: auto;
+    margin-top: 5vh;
+    width: 120px;
+    height: 40px;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul a img{
+    height: 40px;
+    border-radius: 10px;
+}
+
+body{
+    background-color: yellow;
+}
+
+ul{
+    width: 100%;
+    height: 60px;
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* box-sizing: border-box;
+    padding-left: 20px; */
+}

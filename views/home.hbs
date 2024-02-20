@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" href="/header.css">
+</head>
+
+<body>
+    
+    {{>header}}
+
+    {{!-- <p>This is home page</p> --}}
+    <a href="/addnotes" class="add_btn">
+        <button>Add Notes</button>
+    </a>
+
+    <div id="container">
+        {{#each all_notes}}
+        <a href="/noteDetails/{{this._id}}" class="note_box">
+            <p class="createdAt"><span>Create: </span>{{this.createdAt}}</p>
+            <p class="updatedAt"><span>Update: </span>{{this.updatedAt}}</p>
+            <div class="title">
+                {{this.title}}
+            </div>
+            <div class="note">
+                {{this.note}}
+            </div>
+        </a>
+        {{/each}}
+    </div>
+
+</body>
+
+</html>

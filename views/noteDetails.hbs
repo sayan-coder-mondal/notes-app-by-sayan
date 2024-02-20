@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/noteDetails.css">
+</head>
+
+<body>
+
+    {{>header}}
+
+    <form action="/update/{{target_note._id}}?_method=PUT" method="post" id="note_form">
+        <input type="text" name="title" id="title" class="input" placeholder="Add title" required maxlength="30"
+            value="{{target_note.title}}">
+        {{!-- <input type="text" name="note" placeholder="Write notes" class="input" required
+            value="{{target_note.note}}"> --}}
+        <textarea name="note" id="note" class="input" placeholder="Write notes" required
+            maxlength="300">{{target_note.note}}</textarea>
+        <input type="submit" id="submit" value="Update">
+    </form>
+
+    <div id="delete_btn">
+        <button onclick="note_delete()">Delete</button>
+    </div>
+
+    <div id="delete" style="display: none;">
+        <p>Do you really want to delete this note?</p>
+        <div>
+            <button onclick="cancel_popup()">Cancel</button>
+            <form action="/delete/{{target_note._id}}?_method=DELETE" method="post">
+                <input type="submit" id="confirm_delete" value="Delete">
+            </form>
+        </div>
+
+    </div>
+
+    <div id="overlay"></div>
+
+</body>
+<script>
+    function note_delete() {
+        document.getElementById("delete").style.display = "";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function cancel_popup() {
+        document.getElementById("delete").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
+
+</html>
