@@ -138,6 +138,7 @@ app.post("/login", async (req, res) => {
             // res.cookie(name,value,{options})
             res.cookie("jwt_login", token, {
                 // expires: new Date(Date.now() + 20000),
+                expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),    // 7 days from now
                 httpOnly: true
             });
 
